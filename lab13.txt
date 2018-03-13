@@ -1,0 +1,149 @@
+/******************************************************************************
+ * AUTHOR     : Chris Burrell, Saul Moreno
+ * STUDENT ID : 1009369, 269491
+ * LAB #13    : Output - Geometry
+ * CLASS      : CS1A
+ * SECTION    : MW: 8am
+ * DUE DATE   : 3/12/18
+ *****************************************************************************/
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+/******************************************************************************
+ * OUPUT - GEOMETRY
+ * ----------------------------------------------------------------------------
+ * This program will read in the measurements for a Triangle, Circle and a
+ * Rectangle, and will output the area for each of the shapes.
+ *****************************************************************************/
+
+int main()
+{
+
+	const char PROGRAMMER[] = "Chris Burrell, Saul Moreno";
+	const char CLASS[]      = "CS1A";
+	const char 	SECTION[]   = "MW: 8:00 am";
+	const int LAB_NUM       = 13;
+	const char LAB_NAME[]   = "Output - Geometry";
+
+	const float pi = 3.14159;
+	float base;	  	// In, Calc - value used for the base of the Triangle
+	float height;	// In, Calc - value used for the height of the Triangle
+	float heightR;	// In, Calc - value used for the height of the Rectangle
+	float width;	// In, Calc - value used for the width of the Rectangle
+	float radius;	// In, Calc - value used for the radius of the Circle
+	float areaT;	// Calc, Out - value used for the area of the Triangle
+	float areaR;	// Calc, Out - value used for the area of the Rectangle
+	float areaC;	// Calc, Out - value used for the area of the Circle
+
+	//OUTPUT the class heading
+	cout << left;
+	cout << "***********************************************************\n";
+	cout << "*  PROGRAMMED BY : " << PROGRAMMER << endl;
+	cout << "*  "     << setw(14) << "CLASS"    << ": " << CLASS    << endl;
+	cout << "*  "     << setw(14) << "SECTION"  << ": " << SECTION  << endl;
+	cout << "*  LAB #"<< setw(10) << LAB_NUM    << ": "<< LAB_NAME << endl;
+	cout << "************************************************************\n\n";
+	cout << right;
+
+
+	/**************************************************************************
+	 	 * INPUT - reads the height and base for Triangle, width and height for
+	 	 * rectangle, and the radius of the circle.
+	 *************************************************************************/
+
+	cout << left;
+	cout << setw(38) << "Enter the height of the triangle: ";
+	cin  >> height;
+
+	cout << setw(38) << "Enter the base of the triangle: ";
+	cin  >> base;
+
+	cout << endl << setw(38) << "Enter the width of the rectangle: ";
+	cin  >> width;
+
+	cout << setw(38) << "Enter the height of the rectangle: ";
+	cin  >> heightR;
+
+	cout << endl << setw(38) << "Enter the radius of the circle: ";
+	cin  >> radius;
+
+	/**************************************************************************
+	 	 * PROCESSING - Multiplies the height and base of Triangle, then
+	 	 *  divides by 2 to get area of Triangle.
+	 	 * Multiplies width and height of Rectangle to get area of Rectangle.
+	 	 * Multiplies pi and radius^2 to get area of Circle.
+	 *************************************************************************/
+
+	areaT = (height * base) /2;
+	areaR = width * heightR;
+	areaC = pi * radius * radius;
+
+	/**************************************************************************
+	 	 * OUTPUT - outputs the calculated areas of the Triangle, Rectangle, and
+	 	 * Circle
+	 *************************************************************************/
+
+
+	cout << right;
+	cout << endl << setw(18) << "Triangle Area" << setw(19) << "Rectangle Area";
+	cout << setw(16) << "Circle Area" << endl;
+	cout << setw(18) << areaT << setw(19) << areaR << setw(16) << areaC;
+	cout << endl << setw(18) << setprecision(3) << areaT << setw(19);
+	cout << setprecision(3) << areaR << setw(16) << setprecision(3);
+	cout << areaC << endl;
+	cout << showpoint;
+	cout << setprecision(3) << setw(18) << areaT;
+	cout << setprecision(3) << setw(19) << areaR;
+	cout << setprecision(3) << setw(16) << areaC << endl;
+	cout << fixed;
+	cout << setprecision(3) << setw(18) << areaT;
+	cout << setprecision(3) << setw(19) << areaR;
+	cout << setprecision(3) << setw(16) << areaC << endl;
+	cout << setprecision(5) << setw(18) << areaT;
+	cout << setprecision(5) << setw(19) << areaR;
+	cout << setprecision(5) << setw(16) << areaC;
+
+
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
